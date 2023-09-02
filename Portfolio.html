@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Portfolio.css">
+<link rel="stylesheet" href="popup.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://kit.fontawesome.com/1d02b46c83.js" crossorigin="anonymous"></script>
+<script src="Portfolio.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+</head>
+<body>
+    <!-- Header section-->
+    <header class="Header">
+        <h1 class="Logo">LOGO</h1>
+        <Nav class="menu">
+            <a href="#home" class="active">Home</a>
+            <a href="#aboutus">About us</a>
+            <a href="#myworks">My Works</a>
+            <a href="#contactus"> Contact us</a>       
+         </Nav>
+    </header>
+
+    <!-- Home Section Page-->
+    <section class="home" id="home">
+        <div class="Home-content">
+            <h1>Hi, I'm <span class="ml11"> Gowthaman </span> </h1>
+            <div class="text-animate">
+             <h3 id="btn"> Frontend Developer</h3>
+               <!-- Element to contain animated typing -->
+  <span id="element"></span>
+            </div>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+                 velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+           <div class="Button-box">
+            <a href="#" class="btn" type="a" onclick='document.getElementById("btn").innerHTML = "Full Stack Developer"'> Hire Me</a>
+            <a href="#" class="btn"> Let's talk</a>
+           </div>
+           <!--social icons-->
+        <div class="Social">
+            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+        </div>
+        <!-- Image for home section
+        <div class="Image">
+            <img src="/Portfolio Website/Images/close-up-caucasian-man-s-portrait-isolated-blue-studio-neon-light-PhotoRoom.png-PhotoRoom.png" alt="Gowthaman">
+          </div> -->
+        </div>
+</section>
+<hr>
+<!-- About us section-->
+<section class="about" id="aboutus">
+  <div class="Image">
+    <img class="Image1" src="Images/neon-light-studio-portrait-serious-man-model-with-mustaches-beard-sunglasses-PhotoRoom.png-PhotoRoom.png" alt="about">
+  </div>
+    <div class="about1">
+      <h1> About us</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+           laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+           velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+           in culpa qui officia deserunt mollit anim id est laborum. 
+        </p>
+
+        <!-- Popop button section -->
+          <div class="Button-box">
+            <!--  <a href="#" class="btn" onclick="window.print()" >Contact Me</a> --> 
+            <body>
+                <button class="ct_button" onclick="openPopup()">Contact Me</button>
+                <div id="popup" class="popup">
+                  <i class="fa-solid fa-xmark" onclick="closePopup()"></i>
+                  <h3>Feel Free to Contact Us</h3>
+                  <p>We are available 24/7 live support. If you have any queries fill out with this form. </p>
+                  <div>
+                    <table>
+                      <tr>
+                        <td> <input type="text" placeholder="Enter your Name"></td>
+                      </tr>
+                      <tr>
+                        <td> <input type="text"  placeholder="Mobile Number"></td>
+                      </tr>
+                      <tr>
+                        <td> <input type="text" placeholder="Email"> </td>
+                      </tr>
+                      <tr>
+                        <td> <input type="text" placeholder="Message"></td>
+                      </tr>
+                      <button>
+                        <td> <input type="button" value="Submit" onclick="openPopup()"></td>
+                      </button>
+                    </table>
+                  </div>
+                  <!-- <button onclick="closePopup()">Close</button> -->
+                
+                  <script>
+                    let popup = document.getElementById("popup");
+                    function openPopup() {
+                      popup.classList.add("open-popup");
+                    }
+                    function closePopup() {
+                      popup.classList.remove("open-popup");
+                    }
+                  </script>
+                
+                  </body>
+                </div>
+        </div>
+</section>
+
+<!-- My Works Section-->
+<section  class="myworks" id="myworks">
+    <div id="myworks1">
+        <h1>Project 1</h1>
+        <img src="Images/image 1.jpg">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+         </p>
+         <button class="Readmore"> Read More</button>
+    </div>
+    <div id="myworks1">
+        <h1>Project 2</h1>
+        <img src="Images/image 2.jpg">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+         </p>
+         <button class="Readmore"> Read More</button>
+    </div>
+    <div id="myworks1">
+        <h1>Project 3</h1>
+        <img src="Images/image 1.jpg">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+         </p>
+         <button class="Readmore"> Read More</button>
+    </div>
+</section>
+
+<!-- Our service section-->
+<article class="whyus">
+    <div class="article">
+        <h4> What we can do for you</h4>
+        <h1> Services provide for you.</h1>
+        <p>There are many variations of passages of Lorem Ipsum available,
+            but the majority have suffered alteration.</p>
+
+            <!-- Inside articles-->
+           <div class="article1">
+            <a href="#"><i class="fa-solid fa-bullseye"></i></a>
+            <h3> Best Designing </h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. </p>
+           </div>
+           <div class="article1">
+            <a href="#"><i class="fa-solid fa-clock"></i></a>
+            <h3> On Time Service </h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. </p>
+           </div>
+           <div class="article1">
+            <a href="#"><i class="fa-solid fa-object-group"></i></a>
+            <h3> Clear UI & UX </h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. </p>
+           </div>
+           <div class="article1">
+            <a href="#"><i class="fa-solid fa-book-open"></i></a>
+            <h3> Top Content </h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. </p>
+           </div>
+           <div class="article1">
+            <a href="#"><i class="fa-brands fa-searchengin"></i></a>
+            <h3> Clear SEO </h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. </p>
+           </div>
+           <div class="article1">
+            <a href="#"><i class="fa-solid fa-pen-nib"></i></a>
+            <h3> Graphic Design </h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. </p>
+           </div>
+    </div>
+</article>
+
+<!-- Our works-->
+<section class="Section1">
+  <div class="our-works">
+    <h3> Our Projects </h1>
+    <h1> Some of My works</h1>
+    <p> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+      <!-- My nworks Image box-->
+      <div class="image-box">
+        <img src="Images/temps-3.jpg" alt="Image" style="height: 200px; width: 300px;">
+         <div class="image1">
+            <h1>Project 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua.</p>
+            <button>Details</button>
+            </div>
+       </div>
+       <div class="image-box">
+                <img src="Images/image 3.jpg" alt="Image" style="height: 200px; width: 300px;">
+                 <div class="image1">
+                    <h1>Project 2</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                        ut labore et dolore magna aliqua.</p>
+                    <button>Details</button>
+                    </div>
+       </div>
+        <div class="image-box">
+                        <img src="Images/image 4.jpg" alt="Image" style="height: 200px; width: 300px;">
+                         <div class="image1">
+                            <h1>Project 3</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                ut labore et dolore magna aliqua.</p>
+                            <button>Details</button>
+                            </div>
+                     </div>
+</div>
+</section>
+<form class="form1" id="contact.html">
+    <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Contact Form - PHP/MySQL Demo Code</title>
+</head>
+
+<body>
+<fieldset>
+<legend>Contact Form</legend>
+<form name="frmContact" method="post" action="contact.php">
+<p>
+<label for="Name">Name </label>
+<input type="text" name="txtName" id="txtName">
+</p>
+<p>
+<label for="email">Email</label>
+<input type="text" name="txtEmail" id="txtEmail">
+</p>
+<p>
+<label for="phone">Phone</label>
+<input type="text" name="txtPhone" id="txtPhone">
+</p>
+<p>
+<label for="message">Message</label>
+<textarea name="txtMessage" id="txtMessage"></textarea>
+</p>
+<p>&nbsp;</p>
+<p>
+<input type="submit" name="Submit" id="Submit" value="Submit">
+</p>
+</form>
+</fieldset>
+</body>
+</html>
+</form>
+
+ <!-- Confirmation Popup-->                 
+ <section class="popup2">
+    <div class="popup2" id="popup2">
+        <div class="icontick">
+           <i class="fa-solid fa-check"></i>
+           <h1 class="success">Success <span>Your submission has been saved</span></h1>
+        </div>
+        <i class="fa-solid fa-xmark fa-beat" onclick="closePopup()"></i>
+      <script>
+        let popup = document.getElementById("popup2");
+                    function openPopup() {
+                      popup.classList.add("open-popup2");
+                    }
+                    function closePopup() {
+                      popup.classList.remove("open-popup2");
+        }
+      </script>
+     </div>
+  </section>
+
+<!-- Footer Works-->
+<footer>
+    <div class="footer1">
+      <h1> Enough Talk, Let's Build<br> Something Together</h1>
+      <button> Read Out Now</button>
+    </div>
+    <div class="footer2" id="contactus">
+        <div class="footer3">
+          <h1>LOGO</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+           ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="footer3">
+            <h2>Quick Links</h2>
+            <li>Portfolio</li>
+            <li>About</li>
+            <li>Our Team</li>
+            <li>Blogs</li>
+            <li>Contact</li>
+        </div>
+        <div class="footer3">
+            <h2> Company</h2>
+            <li>Portfolio</li>
+            <li>About</li>
+            <li>Our Team</li>
+            <li>Blogs</li>
+            <li>Contact</li>
+        </div>
+        <div class="footer3" id="Contact">
+            <h2> Say hello</h2>
+            <li> <b>Email:</b>gowtham24042001@gmail.com</li>
+            <li><b>Mobile:</b> 9632568978</li>
+            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+        </div>
+    </div>
+    <div class="Copyright">
+        <h1>  © Copyright 2023. All rights Reserved</h1>
+        <h1> Privacy Policy & Terms and Conditions</h1>
+    </div>
+</footer>
+</body>
+</html>
